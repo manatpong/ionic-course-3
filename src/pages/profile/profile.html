@@ -1,0 +1,32 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <div class="flex flex-col items-center">
+    <img class="rounded-full h-32 w-32 " margin-bottom [src]="photoUrl"
+      alt="profile picture"> 
+       <!--มันเป็น syntax พิเศษ html ถ้าดึงตัวแปรมาต้องใส่ []-->
+    <h4 text-uppercase>{{ name }}</h4>
+    <p text-lowwercase margin-top>{{ email }}</p>
+  </div>
+  
+  <ion-list margin-top>
+    <ion-item class="text-xl">
+        Age : {{ age }}
+    </ion-item>
+    <ion-item class="text-xl">
+        Tel. : {{ tel }}
+      </ion-item>
+  </ion-list>
+  <button ion-button full clear (click)="logout()" >LOGOUT</button>
+</ion-content>
